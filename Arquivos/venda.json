@@ -1,0 +1,14 @@
+[
+  {
+    "Id": 1,
+    "Nome_Produto": "MacBook Pro 14",
+    "Preco": 14000.00,
+    "DataVenda": "2024-09-07T20:11:29.8414221-03:00"
+  },
+  {
+    "Id": 2,
+    "Nome_Produto": "Magic Mouse",
+    "Preco": 700.00,
+    "DataVenda": "2024-09-07T20:11:29.8414221-03:00"
+  }
+]

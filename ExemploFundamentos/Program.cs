@@ -2,16 +2,56 @@
 using System;
 using System.Text.RegularExpressions;
 using System.Globalization;
-using ExemploFundamentos.Common.Pessoa;
 using System.Collections.ObjectModel;
 using ExemploFundamentos.Common.Models;
+using Newtonsoft.Json;
 
+
+// USING SERIALIZATION AND DESERIALIZATION FUNCTIONS
+DateTime dataAtual = DateTime.Now;
+
+List<Venda> pedido = new List<Venda>();
+Venda v1 = new Venda(1, "MacBook Pro 14", 14000.00M, dataAtual);
+Venda v2 = new Venda(2, "Magic Mouse", 700.00M, dataAtual);
+
+pedido.Add(v1);
+pedido.Add(v2);
+
+string serialized = JsonConvert.SerializeObject(pedido, Formatting.Indented);
+File.WriteAllText("../Arquivos/venda.json", serialized);
+
+
+string conteudoArquivo = File.ReadAllText("../Arquivos/venda_eletronico.json");
+List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+foreach (Venda venda in listaVenda)
+{
+    Console.WriteLine($"ID: {venda.Id}, Produto: {venda.Produto}, Preço: {venda.Preco.ToString("C")}, Data: {venda.DataVenda.ToShortDateString()}");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 // DECONSTRUCTOR AND TUPLES
 Pessoa p1 = new Pessoa("Melissa", 8);
 (string nome, int idade) = p1;
 
 Console.WriteLine($"{nome} {idade}");
-
+*/
 
 
 
