@@ -1,5 +1,5 @@
 
-namespace ExemploFundamentos.Common.Pessoa
+namespace ExemploFundamentos.Common.Models
 {
     public class Pessoa
     {
@@ -41,7 +41,7 @@ namespace ExemploFundamentos.Common.Pessoa
         }
 
 
-        public void apresentar()
+        public virtual void Apresentar()
         {
             Console.WriteLine($"Olá, meu nome é {this.Nome} e tenho {this.Idade} anos.");
         }
