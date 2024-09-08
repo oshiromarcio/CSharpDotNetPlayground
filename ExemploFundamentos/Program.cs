@@ -5,8 +5,63 @@ using System.Globalization;
 using System.Collections.ObjectModel;
 using ExemploFundamentos.Common.Models;
 using Newtonsoft.Json;
+using ExemploFundamentos.Common.Interfaces;
 
 
+// INTERFACE
+ICalculadora c = new Calculadora();
+Console.WriteLine(c.Multiplicar(5, 7));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+// INHERITANCE
+Aluno a1 = new Aluno("Melissa", 8);
+a1.Nota = 10;
+Console.WriteLine($"Aluno: {a1.Nome}, Idade: {a1.Idade}");
+a1.Apresentar();
+
+// POLYMORPHISM
+Professor p1 = new Professor("Karina", 43);
+p1.Salario = 4000;
+p1.Apresentar();
+
+// ABSTRACT
+Corrente c = new Corrente();
+c.Creditar(1100);
+c.ExibirSaldo();
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 // USING SERIALIZATION AND DESERIALIZATION FUNCTIONS
 DateTime dataAtual = DateTime.Now;
 
@@ -28,7 +83,7 @@ foreach (Venda venda in listaVenda)
 {
     Console.WriteLine($"ID: {venda.Id}, Produto: {venda.Produto}, Preço: {venda.Preco.ToString("C")}, Data: {venda.DataVenda.ToShortDateString()}");
 }
-
+*/
 
 
 
@@ -434,5 +489,5 @@ int minhaIdade = 0;
 int.TryParse(Console.ReadLine(), out minhaIdade);
 Pessoa pessoa = new Pessoa(meuNome, minhaIdade);
 
-pessoa.apresentar();
+pessoa.Apresentar();
 */
